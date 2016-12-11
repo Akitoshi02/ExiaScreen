@@ -1,0 +1,3 @@
+/home/akitoshi/Documents/Projet/ExiaScreen/TermSaverStatic/CMakeFiles/rebuild_cache.dir
+/home/akitoshi/Documents/Projet/ExiaScreen/TermSaverStatic/CMakeFiles/edit_cache.dir
+/home/akitoshi/Documents/Projet/ExiaScreen/TermSaverStatic/CMakeFiles/main.dir

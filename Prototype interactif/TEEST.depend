@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1481532329 source:c:\users\quent_000\desktop\cours exia\cours d'electronique\projets\projet #2\teest\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+

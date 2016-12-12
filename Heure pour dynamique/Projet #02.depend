@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1481377593 source:c:\users\quent_000\desktop\cours exia\cours d'electronique\projets\projet #2\projet #02\main.c
+	<stdio.h>
+	<time.h>
+	<windows.h>
+

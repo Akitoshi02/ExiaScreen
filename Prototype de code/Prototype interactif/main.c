@@ -9,8 +9,16 @@ int main()
     char direction = '0';
     Sleep(5000);
 
+    CONSOLE_SCREEN_BUFFER_INFO csbi;
+    int columns, rows;
+
     while(1)
     {
+        // Recupere la taille de la console.
+        GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
+        columns = csbi.srWindow.Right - csbi.srWindow.Left + 1;
+        rows = csbi.srWindow.Bottom - csbi.srWindow.Top + 1;
+
         printf("\n");
         if(kbhit())
         {
@@ -25,7 +33,7 @@ int main()
                 {
                     //lecture fichier avion vers le haut
                     y += 1;
-                    if(y >= 30)
+                    if(y >= rows)
                     {
                         printf("L'avion a traverser l'ecran\n");
                         y = 0;
@@ -46,7 +54,7 @@ int main()
                     if(y <= 0)
                     {
                         printf("L'avion a traverser l'ecran\n");
-                        y = 30;
+                        y = rows;
                     }
                     else
                         printf("on descend l'avion d'un pixel\n");
@@ -60,7 +68,7 @@ int main()
                 {
                     //Lecture fichier droite de l'avion
                     x += 1;
-                    if(x >= 30)
+                    if(x >= columns)
                     {
                         printf("L'avion a traverser l'ecran\n");
                         x = 0;
@@ -81,7 +89,7 @@ int main()
                     if(x <= 0)
                     {
                         printf("L'avion a traverser l'ecran\n");
-                        x = 30;
+                        x = columns;
                     }
                     else
                         printf("on avance vers la gauche l'avion d'un pixel\n");
@@ -103,7 +111,7 @@ int main()
             {
                 y += 1;
                 printf("Il va vers le haut\n");
-                if(y >= 30)
+                if(y >= rows)
                     {
                         printf("L'avion a traverser l'ecran\n");
                         y = 0;
@@ -119,7 +127,7 @@ int main()
                     if(y <= 0)
                     {
                         printf("L'avion a traverser l'ecran\n");
-                        y = 30;
+                        y = rows;
                     }
                     else
                         printf("on descend l'avion d'un pixel\n");
@@ -129,7 +137,7 @@ int main()
             {
                 x += 1;
                 printf("Il va vers la droite\n");
-                    if(x >= 30)
+                    if(x >= columns)
                     {
                         printf("L'avion a traverser l'ecran\n");
                         x = 0;
@@ -145,7 +153,7 @@ int main()
                     if(x <= 0)
                     {
                         printf("L'avion a traverser l'ecran\n");
-                        x = 30;
+                        x = columns;
                     }
                     else
                         printf("on avance vers la gauche l'avion d'un pixel\n");

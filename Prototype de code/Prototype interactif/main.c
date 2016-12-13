@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <windows.h>
 
-int main()
+int main(int argc, char *argv[])
 {
     int frappe;
     int x = 5, y = 5;
-    char direction = '0';
-    Sleep(5000);
+    char direction = 'd';
+    int bord = 0;
+    int n = 6; //taille de l'avion
+    Sleep(2500);
 
     CONSOLE_SCREEN_BUFFER_INFO csbi;
     int columns, rows;
@@ -24,6 +26,7 @@ int main()
         {
             frappe = getch();
             system("cls");
+            printf("L'avion est en : %d:%d \n", y , x);
 
             switch(frappe)
             {
@@ -32,15 +35,18 @@ int main()
             case 'z':
                 {
                     //lecture fichier avion vers le haut
-                    y += 1;
-                    if(y >= rows)
+                    y -= n;
+                    if(y < 0)
                     {
+                        bord = - y;
+                        printf("Affichage du debut l'avion au coordonnees : %d:%d\n", rows - bord, x);
+                        printf("Et aux coordonnees : 0:%d\n", x);
                         printf("L'avion a traverser l'ecran\n");
-                        y = 0;
+                        y += rows;
                     }
                     else
                         printf("On monte l'avion d'un pixel\n");
-                    printf("Coordonnee = %d:%d", x , y);
+                    printf("Coordonnee = %d:%d", y , x);
                     direction = 'h';
                     //Emplacement de l'avion
                 break;
@@ -50,32 +56,45 @@ int main()
             case 's':
                 {
                     //lecture fichier bas de l'avion
-                    y -= 1;
-                    if(y <= 0)
+                    y += n;
+                    if(y > rows - n)
                     {
+                        bord = rows - y;
+                        printf("Affichage du debut l'avion aux coordonnees : %d:%d\n", y, x);
+                        printf("Et la fin aux coordonnees : %d:0 (L'image va jusqu'en %d)\n", n - bord, x);
                         printf("L'avion a traverser l'ecran\n");
-                        y = rows;
+                        y -= rows;
                     }
                     else
+                    {
                         printf("on descend l'avion d'un pixel\n");
-                    printf("Coordonnee = %d:%d", x , y);
+                        printf("Coordonnee = %d:%d", y , x);
+                    }
                     direction = 'b';
                     //Emplacement de l'avion
                 break;
                 }
+
+
+
             case '6':
             case 'd':
                 {
                     //Lecture fichier droite de l'avion
-                    x += 1;
-                    if(x >= columns)
+                    x += n;
+                    if(x > columns - n)
                     {
+                        bord = columns - x;
+                        printf("Affichage du debut l'avion aux coordonnees : %d:%d\n", y, x);
+                        printf("Et la fin aux coordonnees : %d:0 (L'image va jusqu'en %d)\n", y, n - bord);
                         printf("L'avion a traverser l'ecran\n");
-                        x = 0;
+                        x -= columns;
                     }
                     else
+                    {
                         printf("on avance vers la droite l'avion d'un pixel\n");
-                    printf("Coordonnee = %d:%d", x , y);
+                        printf("Coordonnee = %d:%d",y , x);
+                    }
                     direction = 'd';
                     //Emplacement de l'avion
                 break;
@@ -85,15 +104,19 @@ int main()
             case 'q':
                 {
                     //Lecture fichier gauche de l'avion
-                    x -= 1;
-                    if(x <= 0)
+                    x -= n;
+                    if(x < 0)
                     {
+                        bord = - x;
+                        printf("Affichage du debut l'avion au coordonnees : %d:%d\n", y, columns - bord);
+                        printf("Et aux coordonnees : 0:%d\n", bord);
                         printf("L'avion a traverser l'ecran\n");
-                        x = columns;
+                        Sleep(5000);
+                        x += columns;
                     }
                     else
                         printf("on avance vers la gauche l'avion d'un pixel\n");
-                    printf("Coordonnee = %d:%d", x , y);
+                    printf("Coordonnee = %d:%d", y , x);
                     direction = 'g';
                     //Emplacement de l'avion
                 break;
@@ -103,18 +126,21 @@ int main()
         else
         {
         system("cls");
-        printf("L'avion est en : %d:%d \n", x,y);
+        printf("L'avion est en : %d:%d \n", y , x);
         printf("Mais il avance toujours, donc il change de coordonnees\n");
         switch(direction)
         {
         case 'h':
             {
-                y += 1;
+                y -= n;
                 printf("Il va vers le haut\n");
-                if(y >= rows)
+                if(y < 0)
                     {
+                        bord = - y;
+                        printf("Affichage du debut l'avion au coordonnees : %d:%d\n", rows - bord, x);
+                        printf("Et aux coordonnees : 0:%d\n", x);
                         printf("L'avion a traverser l'ecran\n");
-                        y = 0;
+                        y = rows + y;
                     }
                     else
                         printf("On monte l'avion d'un pixel\n");
@@ -122,12 +148,15 @@ int main()
             }
         case 'b':
             {
-                y -= 1;
+                y += n;
                 printf("Il va vers le bas\n");
-                    if(y <= 0)
+                    if(y > rows - n)
                     {
+                        bord = rows - y;
+                        printf("Affichage du debut l'avion aux coordonnees : %d:%d\n", y, x);
+                        printf("Et la fin aux coordonnees : %d:0 (L'image va jusqu'en %d)\n", n - bord, x);
                         printf("L'avion a traverser l'ecran\n");
-                        y = rows;
+                        y -= rows;
                     }
                     else
                         printf("on descend l'avion d'un pixel\n");
@@ -135,12 +164,15 @@ int main()
             }
         case 'd':
             {
-                x += 1;
+                x += n;
                 printf("Il va vers la droite\n");
-                    if(x >= columns)
+                    if(x > columns - n)
                     {
+                        bord = columns - x;
+                        printf("Affichage du debut l'avion aux coordonnees : %d:%d\n", y, x);
+                        printf("Et la fin aux coordonnees : %d:0 (L'image va jusqu'en %d)\n", y, n - bord);
                         printf("L'avion a traverser l'ecran\n");
-                        x = 0;
+                        x -= columns;
                     }
                     else
                         printf("on avance vers la droite l'avion d'un pixel\n");
@@ -148,20 +180,23 @@ int main()
             }
         case 'g':
             {
-                x -= 1;
+                x -= n;
                 printf("Il va vers la gauche\n");
                     if(x <= 0)
                     {
+                        bord = - x;
+                        printf("Affichage du debut l'avion au coordonnees : %d:%d\n", y, columns - bord);
+                        printf("Et aux coordonnees : 0:%d\n", bord);
                         printf("L'avion a traverser l'ecran\n");
-                        x = columns;
+                        x = columns + x;
                     }
                     else
                         printf("on avance vers la gauche l'avion d'un pixel\n");
                 break;
             }
         }
-        printf("Coordonnee = %d:%d", x , y);
+        printf("Coordonnee = %d:%d", y , x);
         }
-        Sleep(1000);
+        Sleep(1500);
     }
 }

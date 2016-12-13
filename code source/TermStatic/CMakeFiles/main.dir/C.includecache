@@ -23,6 +23,8 @@ sys/types.h
 -
 sys/shm.h
 -
+math.h
+-
 pthread.h
 -
 dirent.h

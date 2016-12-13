@@ -10,7 +10,6 @@ void *lirepbm(PBM *f)
     char *dir = NULL;
     dir = getenv("EXIASAVER1_PMB");//On lit la variable d'environnement
     char *totaldir = NULL;
-
     //Variable de boucle
     int i = 0, y = 0, z = 0, g = 0;
     //Variable nombre aléatoire
@@ -21,6 +20,7 @@ void *lirepbm(PBM *f)
     DIRIMG *imglist = NULL;
     //Variable 'curseur' permettant de récupèrer le caractère lu
     char charnow = 0;
+    char nbmagique[3];
     
     if(dir == NULL) //Si la variable d'environnement n'existe pas 
     {
@@ -51,6 +51,7 @@ void *lirepbm(PBM *f)
         pthread_exit(0);   
     }
      //On fusion "dir" avec l'images choisi du tableau de la liste d'image
+     
     sprintf(totaldir, "%s/%s", dir, imglist->filelist[random]);
 
     //On ouvre l'image choisi aléatoirement
@@ -58,8 +59,9 @@ void *lirepbm(PBM *f)
     if(fpbm != NULL)
     {
 
+        //nombre magique
+        fscanf(fpbm, "%s", nbmagique);
         //On cherche la taille du fichier
-        fseek(fpbm, 4, SEEK_SET);
         fscanf(fpbm, "%d %d", &f->H, &f->L);
      
         //On créer notre tableau qui contiendra les données "01 01 01 11 00 etc..."
@@ -98,7 +100,7 @@ void *lirepbm(PBM *f)
         //exit(2);
         pthread_exit(0);   
     }
-    pthread_exit(0);   
+    //pthread_exit(0);   
 }
 
 

@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     int x = 5, y = 5;
     char direction = 'd';
     int bord = 0;
-    int n = 6; //taille de l'avion
+    int n = 1; //taille de l'avion
     Sleep(2500);
 
     CONSOLE_SCREEN_BUFFER_INFO csbi;

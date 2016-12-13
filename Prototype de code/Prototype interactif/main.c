@@ -19,6 +19,8 @@ int main()
 
             switch(frappe)
             {
+            case '8':
+            case 'h':
             case 'z':
                 {
                     //lecture fichier avion vers le haut
@@ -35,6 +37,8 @@ int main()
                     //Emplacement de l'avion
                 break;
                 }
+            case '2':
+            case 'b':
             case 's':
                 {
                     //lecture fichier bas de l'avion
@@ -51,6 +55,7 @@ int main()
                     //Emplacement de l'avion
                 break;
                 }
+            case '6':
             case 'd':
                 {
                     //Lecture fichier droite de l'avion
@@ -67,6 +72,8 @@ int main()
                     //Emplacement de l'avion
                 break;
                 }
+            case '4':
+            case 'g':
             case 'q':
                 {
                     //Lecture fichier gauche de l'avion
@@ -147,6 +154,6 @@ int main()
         }
         printf("Coordonnee = %d:%d", x , y);
         }
-        Sleep(2000);
+        Sleep(1000);
     }
 }

@@ -7,6 +7,6 @@
 void Createtabvir(TABVIRTUEL *tabvir, int H, int L);
 void afftabvir(TABVIRTUEL * tabvir);
 void *placement(TABVIRTUEL *grid, TABVIRTUEL *tabvir, int x, int y);
-void moteurrendu(TABVIRTUEL *tabvir, PBM *file);
+void moteurrendu(TABVIRTUEL *tabvir, PBM *file, int tailleimg, POS position);
 
 #endif

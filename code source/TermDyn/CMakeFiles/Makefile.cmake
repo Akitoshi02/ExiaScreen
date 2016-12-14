@@ -41,5 +41,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/terminter.dir/DependInfo.cmake"
+  "CMakeFiles/termdyn.dir/DependInfo.cmake"
   )

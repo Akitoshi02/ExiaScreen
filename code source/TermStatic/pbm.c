@@ -1,5 +1,10 @@
 #include "pbm.h"
-
+//Permet de génèrer un nombre aléatoire
+int genrandom(int min, int max)
+{
+   
+    return rand()%((max - 1) - min + 1) + min;
+}
 void *lirepbm(PBM *f)
 {
     //Variable de fichier

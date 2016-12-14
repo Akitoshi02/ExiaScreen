@@ -140,18 +140,11 @@ void moteurrendu(TABVIRTUEL *tabvir, PBM *file)
         curseurL = 0;
     }
 
-    printf("curseur %d %d\n", curseurH, curseurL);
-    printf("pixel %d %d\n", pixelH, pixelL);
-    
-  
     //Puis on place dans le tableau le .pbm
     //On prend en compte deux possibilité si la taille de limage est inférieur ou égale à la taille du tableau virtuel
     //Ou si la taille est supérieur
     if(file->H <= tabvir->H &&  file->L <= tabvir->L )
     {
-        puts("coucou");
-
-
         for(i = 0; i < file->H; i++)
         {
 

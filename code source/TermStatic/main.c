@@ -13,33 +13,58 @@ void *stopevent(int *flagquit);
 
 int main(int argc, char *argv[])
 {
+    //Structure tableau virtuel
     TABVIRTUEL tabvir; //tableau virtuel
+    //Structure fichier
     PBM file; //Fichier .pbm
     file.data = NULL;
-    int choix = 0;
+    //Variable pour quitter le programme
     int flagquit = 0;
     int tailleL = 0, tailleH = 0;
     pthread_t thlecture, thstop;
     struct winsize sterm;
-
+    char * dir = NULL;
+    //Structure qui récupère la list des images
+    DIRIMG *imglist;
+    int tailleimg = 0;
      float ratio = 0.0;
      float ratioimg = 0.0;
+
+     unsetenv("EXIASAVER1_PMB");
+    setenv("EXIASAVER1_PMB", "/home/akitoshi/Images/imgterm1", 0);
+    dir = getenv("EXIASAVER1_PMB");
+    srand(time(NULL));
+    imglist = listrepertory(dir);
+    //On sécurise le choix de l'image
      if(argc == 3)
      {
-         file.random = atoi(argv[2]);
+         if(atoi(argv[2]) < imglist->taille)
+         {
+            file.random = atoi(argv[2]);
+         }
+         else
+         {
+             file.random = genrandom(0, imglist->taille);  
+         }
+
+     }
+     else
+     {
+
+        file.random = genrandom(0, imglist->taille);
      }
     
     //Lecture du fichier .pbm pour charger l'image
     //On lit le fichier dans un thread
     if (pthread_create(&thlecture, NULL, (void *)lirepbm, &file)) 
     {
-	    puts("pthread_create");
+	    perror("pthread_create");
 	    
     } 
     //thread qui va detecter l'appui d'une touche 
     if (pthread_create(&thstop, NULL, (void *)stopevent, &flagquit)) 
     {
-	    puts("pthread_create");
+	    perror("pthread_create");
 	    
     } 
 

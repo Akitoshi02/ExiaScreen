@@ -23,7 +23,7 @@ void Createtabvir(TABVIRTUEL *tabvir, int H, int L)
 
 }
 
-
+//Moteur de placement dans l'espace
 void *placement(TABVIRTUEL *grid, TABVIRTUEL *tabvir, int x, int y)
 {
     struct winsize sterm;
@@ -31,10 +31,8 @@ void *placement(TABVIRTUEL *grid, TABVIRTUEL *tabvir, int x, int y)
     char pixelnow = 0;
     int i = 0, z = 0;
     int cx = 0, cy = 0;
-    //150 -20
         for(i = 0; i < tabvir->H; i++)
         {
-
             for(z = 0; z < tabvir->L; z++)
             {  
                 pixelnow = tabvir->data[i][z];
@@ -60,8 +58,6 @@ void *placement(TABVIRTUEL *grid, TABVIRTUEL *tabvir, int x, int y)
                     }   
                     grid->data[cy][cx] = pixelnow;    
             }
-
-
         }
 }
 //Fonction d'affichage
@@ -114,7 +110,7 @@ void afftabvir(TABVIRTUEL * tabvir)
     }
 }
 
-void moteurrendu(TABVIRTUEL *tabvir, PBM *file)
+void moteurrendu(TABVIRTUEL *tabvir, PBM *file, int tailleimg, POS position)
 {
 
     //variable de boucle
@@ -125,38 +121,84 @@ void moteurrendu(TABVIRTUEL *tabvir, PBM *file)
     int pixelH = 0, pixelL = 0;
     //variable lecture caractère
     char pixelnow = 0;
+    //Structure de ficher
+    PBM *f;
+    PBM fnow;
+    f = malloc(tailleimg * sizeof(PBM));
 
-
-      //module de rendu    
-    //Permet de calculer la taille d'un pixel
-    if(file->L < tabvir->L)
+    //On tri le tableau avec n passage (tri à bulle....)
+    for(y = 0; y < tailleimg; y++)
     {
+        for(i = 0; i < tailleimg-1; i++)
+        {
+            if(file[i].type > file[i+1].type)
+            {
+                f[i] = file[i];
+                file[i] = file[i+1];
+                file[i+1] = f[i];
+            }  
+        }
+    }
+    for(y = 0; y < tailleimg; y++)
+    {
+        for(i = 0; i < tailleimg-1; i++)
+        {
+            if(file[i].type > file[i+1].type)
+            {
+                f[i] = file[i];
+                file[i] = file[i+1];
+                file[i+1] = f[i];
+            }  
+        }
+    }
+   
+    free(f);
+    f = NULL;
 
-        pixelL = tabvir->L / file->L;       
+      //On choisi l'image sellons la direction
+      if(position == HAUT)
+      {
+          fnow = file[3];
+      }
+      if(position == BAS)
+      {
+        fnow = file[0]; 
+      }
+      if(position == DROITE)
+      {
+        fnow = file[1]; 
+      }
+      if (position == GAUCHE)
+      {
+           fnow = file[2];        
+      }
+    //Permet de calculer la taille d'un pixel
+    if(fnow.L < tabvir->L)
+    {
+        pixelL = tabvir->L/ fnow.L;       
     }
     else
     {
         pixelL = 1;  
-    }
-    if (file->H < tabvir->H)
+    }   
+    if (fnow.H < tabvir->H)
     {
-         pixelH = tabvir->H / file->H;
+         pixelH = tabvir->H / fnow.H;
     }
     else
     {      
         pixelH = 1;
     }
 
-
     //On rempli le tableau en redimenssionant les pixel du fichier pour le remplir
     //On centre le .pbm au centre du tableau virtuel
 
-     curseurH = ((tabvir->H - (file->H * pixelH))) / 2;
+     curseurH = ((tabvir->H - (fnow.H * pixelH))) / 2;
     if(curseurH < 1)
     {
         curseurH = 0;
     }
-    curseurL = ((tabvir->L - (file->L * pixelL))) / 2;
+    curseurL = ((tabvir->L - (fnow.L * pixelL))) / 2;
     if(curseurL < 1)
     {
         curseurL = 0;
@@ -165,14 +207,14 @@ void moteurrendu(TABVIRTUEL *tabvir, PBM *file)
     //Puis on place dans le tableau le .pbm
     //On prend en compte deux possibilité si la taille de limage est inférieur ou égale à la taille du tableau virtuel
     //Ou si la taille est supérieur
-    if(file->H <= tabvir->H &&  file->L <= tabvir->L )
+    if(fnow.H <= tabvir->H && fnow.L <= tabvir->L )
     {
-        for(i = 0; i < file->H; i++)
+        for(i = 0; i < fnow.H; i++)
         {
 
-            for(y = 0; y < file->L; y++)
+            for(y = 0; y < fnow.L; y++)
             {  
-                pixelnow = file->data[i][y];
+                pixelnow = fnow.data[i][y];
 
                 for(z = 0; z < pixelH; z++)
                 {
@@ -185,7 +227,7 @@ void moteurrendu(TABVIRTUEL *tabvir, PBM *file)
            
                 curseurL = curseurL + pixelL;
             }
-            curseurL = ((tabvir->L - (file->L * pixelL))) / 2;
+            curseurL = ((tabvir->L - (fnow.L * pixelL))) / 2;
             curseurH = curseurH + pixelH;
         }
         curseurH = 0;
@@ -195,13 +237,13 @@ void moteurrendu(TABVIRTUEL *tabvir, PBM *file)
     {
        for(i = 0; i < tabvir->H; i++)
         {
-            if(i < file->H)//On bloque la réduction de l'image pour évité un dépassement de mémoire
+            if(i < fnow.H)//On bloque la réduction de l'image pour évité un dépassement de mémoire
             {
                 for(y = 0; y < tabvir->L; y++)
                 {  
-                    if(y < file->L)//On bloque la réduction de l'image pour évité un dépassement de mémoire
+                    if(y < fnow.L)//On bloque la réduction de l'image pour évité un dépassement de mémoire
                     {
-                        pixelnow = file->data[i][y];
+                        pixelnow = fnow.data[i][y];
 
                         for(z = 0; z < pixelH; z++)
                         {
@@ -215,7 +257,7 @@ void moteurrendu(TABVIRTUEL *tabvir, PBM *file)
                         curseurL = curseurL + pixelL;
                     }
                 }
-                curseurL = ((tabvir->L - (file->L * pixelL))) / 2;
+                curseurL = ((tabvir->L - (fnow.L * pixelL))) / 2;
                 curseurH = curseurH + pixelH;
             }
         }

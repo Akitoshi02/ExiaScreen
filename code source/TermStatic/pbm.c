@@ -18,22 +18,19 @@ void *lirepbm(PBM *f)
     int taille = 0;
     //Structure listant les noms d'images
     DIRIMG *imglist = NULL;
+
+    //on récupère le nombre aléatoire
+    random = f->random;
     //Variable 'curseur' permettant de récupèrer le caractère lu
     char charnow = 0;
     char nbmagique[3];
     
     if(dir == NULL) //Si la variable d'environnement n'existe pas 
     {
-        dir = "images";//On cherche dans le répertoire du dossier de l'executable
+        dir = "imagesstat";//On cherche dans le répertoire du dossier de l'executable
     }
 
     imglist = listrepertory(dir);//On récupère les images du répertoire
-
-
-
-    //On génère un nombre aléatoire qui permettra de choisir un fichier de façon aléatoire
-    srand(time(NULL));
-    random =  rand()%((imglist->taille - 1) - 0 + 1) + 0;
 
 
     //On calcule la taille total directory + nom de l'images
@@ -161,6 +158,7 @@ DIRIMG *listrepertory(char *dir)
     else
     {
         exit(1);
+        puts("erreur lecture directory");
     }
      closedir(directory);//On ferme le répertoire
 

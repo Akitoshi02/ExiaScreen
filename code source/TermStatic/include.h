@@ -39,6 +39,7 @@ typedef struct PBM
 
     int H;
     int L;
+    int random;
     char **data;
 }PBM;
 

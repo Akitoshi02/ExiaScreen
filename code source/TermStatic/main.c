@@ -20,24 +20,14 @@ int main(int argc, char *argv[])
     int flagquit = 0;
     int tailleL = 0, tailleH = 0;
     pthread_t thlecture, thstop;
-     struct winsize sterm;
+    struct winsize sterm;
 
      float ratio = 0.0;
      float ratioimg = 0.0;
-
-    //On enlève le curseur
-    system("setterm -cursor off");
-
-    //On définie la variable d'environnement
-    unsetenv("EXIASAVER1_PMB");
-    setenv("EXIASAVER1_PMB", "/home/akitoshi/Images/imgterm1", 0);
-
-
-    //Création du tableau virtuel
-    /*Createtabvir(&tabvir, 25, 50);
-    lirepbm(&file);
-    moteurrendu(&tabvir, &file);
-    afftabvir(&tabvir);*/
+     if(argc == 3)
+     {
+         file.random = atoi(argv[2]);
+     }
     
     //Lecture du fichier .pbm pour charger l'image
     //On lit le fichier dans un thread

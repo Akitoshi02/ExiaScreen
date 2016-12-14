@@ -1,0 +1,3 @@
+/home/akitoshi/Documents/Projet/ExiaScreen/Term/TermInterac/CMakeFiles/edit_cache.dir
+/home/akitoshi/Documents/Projet/ExiaScreen/Term/TermInterac/CMakeFiles/rebuild_cache.dir
+/home/akitoshi/Documents/Projet/ExiaScreen/Term/TermInterac/CMakeFiles/terminter.dir

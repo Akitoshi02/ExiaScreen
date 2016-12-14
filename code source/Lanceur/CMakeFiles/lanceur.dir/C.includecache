@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/akitoshi/Documents/Projet/ExiaScreen/Lanceur/include.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/ioctl.h
+-
+sys/wait.h
+-
+sys/types.h
+-
+sys/shm.h
+-
+dirent.h
+-
+string.h
+-
+time.h
+-
+errno.h
+-
+assert.h
+-
+
+/home/akitoshi/Documents/Projet/ExiaScreen/Lanceur/main.c
+repertoire.h
+/home/akitoshi/Documents/Projet/ExiaScreen/Lanceur/repertoire.h
+
+/home/akitoshi/Documents/Projet/ExiaScreen/Lanceur/repertoire.c
+repertoire.h
+/home/akitoshi/Documents/Projet/ExiaScreen/Lanceur/repertoire.h
+
+/home/akitoshi/Documents/Projet/ExiaScreen/Lanceur/repertoire.h
+include.h
+/home/akitoshi/Documents/Projet/ExiaScreen/Lanceur/include.h
+

@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/termstatic.dir/processus.c.o CMakeFiles/termstatic.dir/main.c.o CMakeFiles/termstatic.dir/virtuel.c.o CMakeFiles/termstatic.dir/pbm.c.o  -o termstatic -rdynamic -lpthread -lm 

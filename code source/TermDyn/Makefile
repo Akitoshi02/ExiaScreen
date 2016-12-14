@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermDyn
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named terminter
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+terminter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 terminter
+.PHONY : terminter
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+terminter/fast:
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/build
+.PHONY : terminter/fast
 
 main.o: main.c.o
 
@@ -129,7 +129,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.o
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -138,7 +138,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.i
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -147,7 +147,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.c.s
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/main.c.s
 .PHONY : main.c.s
 
 pbm.o: pbm.c.o
@@ -156,7 +156,7 @@ pbm.o: pbm.c.o
 
 # target to build an object file
 pbm.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pbm.c.o
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/pbm.c.o
 .PHONY : pbm.c.o
 
 pbm.i: pbm.c.i
@@ -165,7 +165,7 @@ pbm.i: pbm.c.i
 
 # target to preprocess a source file
 pbm.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pbm.c.i
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/pbm.c.i
 .PHONY : pbm.c.i
 
 pbm.s: pbm.c.s
@@ -174,7 +174,7 @@ pbm.s: pbm.c.s
 
 # target to generate assembly for a file
 pbm.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pbm.c.s
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/pbm.c.s
 .PHONY : pbm.c.s
 
 processus.o: processus.c.o
@@ -183,7 +183,7 @@ processus.o: processus.c.o
 
 # target to build an object file
 processus.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/processus.c.o
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/processus.c.o
 .PHONY : processus.c.o
 
 processus.i: processus.c.i
@@ -192,7 +192,7 @@ processus.i: processus.c.i
 
 # target to preprocess a source file
 processus.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/processus.c.i
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/processus.c.i
 .PHONY : processus.c.i
 
 processus.s: processus.c.s
@@ -201,7 +201,7 @@ processus.s: processus.c.s
 
 # target to generate assembly for a file
 processus.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/processus.c.s
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/processus.c.s
 .PHONY : processus.c.s
 
 virtuel.o: virtuel.c.o
@@ -210,7 +210,7 @@ virtuel.o: virtuel.c.o
 
 # target to build an object file
 virtuel.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/virtuel.c.o
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/virtuel.c.o
 .PHONY : virtuel.c.o
 
 virtuel.i: virtuel.c.i
@@ -219,7 +219,7 @@ virtuel.i: virtuel.c.i
 
 # target to preprocess a source file
 virtuel.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/virtuel.c.i
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/virtuel.c.i
 .PHONY : virtuel.c.i
 
 virtuel.s: virtuel.c.s
@@ -228,7 +228,7 @@ virtuel.s: virtuel.c.s
 
 # target to generate assembly for a file
 virtuel.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/virtuel.c.s
+	$(MAKE) -f CMakeFiles/terminter.dir/build.make CMakeFiles/terminter.dir/virtuel.c.s
 .PHONY : virtuel.c.s
 
 # Help Target
@@ -237,9 +237,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
+	@echo "... rebuild_cache"
+	@echo "... terminter"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

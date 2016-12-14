@@ -31,7 +31,6 @@ typedef struct TABVIRTUEL
     int H;
     int L;
     char **data;
-    int type;
 }TABVIRTUEL;
 
 //Structure d'un fichier pbm
@@ -40,8 +39,8 @@ typedef struct PBM
 
     int H;
     int L;
+    int random;
     char **data;
-    int type; //si chiffre ou deux points
 }PBM;
 
 //structure du répertoire d'images
@@ -51,23 +50,12 @@ typedef struct dirimg
     char **filelist;
     int taille;
 }DIRIMG;
-//Structure d'un pixel
+
 typedef struct pixel 
 {
     int H;
     int L;
 }PIXEL;
 
-//Structure de l'heure
-typedef struct HORAIRE
-{
-    int heure[2];
-    int minute[2];
-    int seconde[2];
-
-}HEURE;
-
-
-HEURE getheure(void);
 
 #endif

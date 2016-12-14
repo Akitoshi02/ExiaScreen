@@ -9,6 +9,6 @@ void afftabvir(TABVIRTUEL *tabvir);
 
 void *affthread(TABVIRTUEL *tabvir);
 
-void moteurrendu(TABVIRTUEL *tabvir, PBM *file, int tailleimg);
+void moteurrendu(TABVIRTUEL *tabvir, PBM *file);
 
 #endif

@@ -79,43 +79,25 @@ void *affthread(TABVIRTUEL * tabvir)
     pthread_exit(0);    
 }
 
-void moteurrendu(TABVIRTUEL *tabvir, PBM *file, int tailleimg)
+void moteurrendu(TABVIRTUEL *tabvir, PBM *file)
 {
+
     //variable de boucle
-    int i = 0, y = 0, z = 0, g = 0, t = 0, x = 0;
+    int i = 0, y = 0, z = 0, g = 0, h = 0;
     //variable curseur
-  
-    int curseurH = 0, curseurL = 0, curseur = 0;
-    //Variable heure
-    HEURE h;
+    int curseurH = 0, curseurL = 0;
     //variable pixel
     int pixelH = 0, pixelL = 0;
-    int mapage[10];
+    PIXEL pixel;
+    pixel.H = 0;
+    pixel.L = 0;
     //variable lecture caractère
     char pixelnow = 0;
-    //Structure de ficher
-    PBM *f;
-    PBM fnow;
-    f = malloc(tailleimg * sizeof(PBM));
-    
 
-    //On tri le tableau avec n passage (tri à bulle....)
-    for(y = 0; y < tailleimg; y++)
-    {
-        for(i = 0; i < tailleimg-1; i++)
-        {
-            if(file[i].type > file[i+1].type)
-            {
-                f[i] = file[i];
-                file[i] = file[i+1];
-                file[i+1] = f[i];
-            }  
-        }
-    }
-    free(f);
-    f = NULL;
 
-    //On nettoie le tableau
+      //module de rendu
+
+      //On nettoie le tableau
     for(i = 0; i < tabvir->H; i++)
     {
         for(y = 0; y < tabvir->L; y++)
@@ -123,106 +105,106 @@ void moteurrendu(TABVIRTUEL *tabvir, PBM *file, int tailleimg)
             tabvir->data[i][y] = 0;
         }
     }
-    h = getheure();
-//Remplisage du tableau
-  for(t = 0; t < 8; t++)
-  {
-      
-
-      //On choisi quel fichier lire pour afficher l'heure
-      if(t == 2 || t == 5)
-      {
-          fnow = file[10];
-      }
-      if(t == 0)
-      {
-          fnow = file[h.heure[0]];
-      }
-      if(t == 1)
-      {
-         fnow = file[h.heure[1]];  
-      }
-      if(t == 3)
-      {
-         fnow = file[h.minute[0]];   
-      }
-      if(t == 4)
-      {
-         fnow = file[h.minute[1]];   
-      }
-      if(t == 6)
-      {
-         fnow = file[h.seconde[0]];   
-      }
-      if(t == 7)
-      {
-         fnow = file[h.seconde[1]];   
-      }        
+    
     //Permet de calculer la taille d'un pixel
-    if(fnow.L < tabvir->L)
+    if(file->L < tabvir->L)
     {
 
-        pixelL = (tabvir->L / 8) / fnow.L;       
+        pixelL = tabvir->L / file->L;       
     }
     else
     {
         pixelL = 1;  
-    }   
-    if (fnow.H < tabvir->H)
+    }
+    if (file->H < tabvir->H)
     {
-         pixelH = tabvir->H / fnow.H;
+         pixelH = tabvir->H / file->H;
     }
     else
     {      
         pixelH = 1;
     }
 
+
     //On rempli le tableau en redimenssionant les pixel du fichier pour le remplir
     //On centre le .pbm au centre du tableau virtuel
 
-     curseurH = ((tabvir->H- (fnow.H * pixelH))) / 2;
+     curseurH = ((tabvir->H - (file->H * pixelH))) / 2;
     if(curseurH < 1)
     {
         curseurH = 0;
     }
+    curseurL = ((tabvir->L - (file->L * pixelL))) / 2;
+    if(curseurL < 1)
+    {
+        curseurL = 0;
+    }
 
-    curseurL = (((tabvir->L / 8 )- (fnow.L * pixelL))) / 2; 
-        
+    printf("curseur %d %d\n", curseurH, curseurL);
+    printf("pixel %d %d\n", pixelH, pixelL);
+    
+  
     //Puis on place dans le tableau le .pbm
     //On prend en compte deux possibilité si la taille de limage est inférieur ou égale à la taille du tableau virtuel
     //Ou si la taille est supérieur
-
-    if(file->H <= tabvir->H && fnow.L <= (tabvir->L / 8) )
+    if(file->H <= tabvir->H &&  file->L <= tabvir->L )
     {
-        for(i = 0; i < fnow.H; i++)
+        puts("coucou");
+
+
+        for(i = 0; i < file->H; i++)
         {
 
-            for(y = 0; y < fnow.L; y++)
+            for(y = 0; y < file->L; y++)
             {  
-                pixelnow = fnow.data[i][y];
+                pixelnow = file->data[i][y];
 
                 for(z = 0; z < pixelH; z++)
                 {
                 
                     for(g = 0; g < pixelL; g++)
                     { 
-
-                        tabvir->data[z + curseurH][g + curseurL + curseur] = pixelnow;                 
-                    }           
+                        tabvir->data[z + curseurH][g + curseurL] = pixelnow;                 
+                    }               
                 }
            
                 curseurL = curseurL + pixelL;
             }
-            
-             curseurL = 0;
+            curseurL = ((tabvir->L - (file->L * pixelL))) / 2;
             curseurH = curseurH + pixelH;
         }
         curseurH = 0;
-      
 
     }
+    else //partie qui réduit l'image (encore un peu)
+    {
+       for(i = 0; i < tabvir->H; i++)
+        {
+            if(i < file->H)//On bloque la réduction de l'image pour évité un dépassement de mémoire
+            {
+                for(y = 0; y < tabvir->L; y++)
+                {  
+                    if(y < file->L)//On bloque la réduction de l'image pour évité un dépassement de mémoire
+                    {
+                        pixelnow = file->data[i][y];
 
-      //On déplace la saisie pour écrire chaque chiffre
-        curseur += (tabvir->L / 8);
-  }
+                        for(z = 0; z < pixelH; z++)
+                        {
+                
+                            for(g = 0; g < pixelL; g++)
+                            { 
+                                tabvir->data[z + curseurH][g + curseurL] = pixelnow;     
+                              
+                            }               
+                        }
+                        curseurL = curseurL + pixelL;
+                    }
+                }
+                curseurL = ((tabvir->L - (file->L * pixelL))) / 2;
+                curseurH = curseurH + pixelH;
+            }
+        }
+        curseurH = 0;
+        
+    }
 }

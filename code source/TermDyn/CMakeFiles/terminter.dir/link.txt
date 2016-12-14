@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/terminter.dir/processus.c.o CMakeFiles/terminter.dir/main.c.o CMakeFiles/terminter.dir/virtuel.c.o CMakeFiles/terminter.dir/pbm.c.o  -o terminter -rdynamic -lpthread -lm 

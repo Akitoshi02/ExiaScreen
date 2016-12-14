@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/akitoshi/Documents/Proje
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7e5a8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7e5a8.dir/build.make CMakeFiles/cmTC_7e5a8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b91a6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b91a6.dir/build.make CMakeFiles/cmTC_b91a6.dir/build
 make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_7e5a8.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_7e5a8.dir/testCCompiler.c.o   -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_7e5a8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e5a8.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_7e5a8.dir/testCCompiler.c.o  -o cmTC_7e5a8 -rdynamic 
+Building C object CMakeFiles/cmTC_b91a6.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_b91a6.dir/testCCompiler.c.o   -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_b91a6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b91a6.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_b91a6.dir/testCCompiler.c.o  -o cmTC_b91a6 -rdynamic 
 make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_00e44/fast"
-/usr/bin/make -f CMakeFiles/cmTC_00e44.dir/build.make CMakeFiles/cmTC_00e44.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_acf17/fast"
+/usr/bin/make -f CMakeFiles/cmTC_acf17.dir/build.make CMakeFiles/cmTC_acf17.dir/build
 make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_00e44.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_00e44.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.6/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_00e44
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00e44.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_00e44.dir/CMakeCCompilerABI.c.o  -o cmTC_00e44 -rdynamic  
+Building C object CMakeFiles/cmTC_acf17.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_acf17.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.6/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_acf17
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acf17.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_acf17.dir/CMakeCCompilerABI.c.o  -o cmTC_acf17 -rdynamic  
 Utilisation des specs internes.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper
@@ -59,9 +59,9 @@ Modèle de thread: posix
 gcc version 6.2.1 20160830 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_00e44' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccndFBBo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_00e44 /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../.. CMakeFiles/cmTC_00e44.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_00e44' '-rdynamic' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_acf17' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cckC6aQO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_acf17 /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../.. CMakeFiles/cmTC_acf17.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_acf17' '-rdynamic' '-mtune=generic' '-march=x86-64'
 make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
 
 
@@ -69,14 +69,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_00e44/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_00e44.dir/build.make CMakeFiles/cmTC_00e44.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_acf17/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_acf17.dir/build.make CMakeFiles/cmTC_acf17.dir/build]
   ignore line: [make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »]
-  ignore line: [Building C object CMakeFiles/cmTC_00e44.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_00e44.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.6/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_00e44]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00e44.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_00e44.dir/CMakeCCompilerABI.c.o  -o cmTC_00e44 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTC_acf17.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_acf17.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.6/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_acf17]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acf17.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_acf17.dir/CMakeCCompilerABI.c.o  -o cmTC_acf17 -rdynamic  ]
   ignore line: [Utilisation des specs internes.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper]
@@ -86,13 +86,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 6.2.1 20160830 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_00e44' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccndFBBo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_00e44 /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../.. CMakeFiles/cmTC_00e44.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_acf17' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/cckC6aQO.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_acf17 /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../.. CMakeFiles/cmTC_acf17.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crtn.o]
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccndFBBo.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cckC6aQO.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -107,7 +107,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_00e44] ==> ignore
+    arg [cmTC_acf17] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtbegin.o] ==> ignore
@@ -116,7 +116,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../..]
-    arg [CMakeFiles/cmTC_00e44.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_acf17.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -147,14 +147,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_9add8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9add8.dir/build.make CMakeFiles/cmTC_9add8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a97fa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a97fa.dir/build.make CMakeFiles/cmTC_a97fa.dir/build
 make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_9add8.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_9add8.dir/feature_tests.c.o   -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.c
-Linking C executable cmTC_9add8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9add8.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_9add8.dir/feature_tests.c.o  -o cmTC_9add8 -rdynamic 
+Building C object CMakeFiles/cmTC_a97fa.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_a97fa.dir/feature_tests.c.o   -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.c
+Linking C executable cmTC_a97fa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a97fa.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_a97fa.dir/feature_tests.c.o  -o cmTC_a97fa -rdynamic 
 make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
 
 
@@ -167,14 +167,14 @@ make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScre
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_57062/fast"
-/usr/bin/make -f CMakeFiles/cmTC_57062.dir/build.make CMakeFiles/cmTC_57062.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_478dc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_478dc.dir/build.make CMakeFiles/cmTC_478dc.dir/build
 make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_57062.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_57062.dir/feature_tests.c.o   -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.c
-Linking C executable cmTC_57062
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57062.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_57062.dir/feature_tests.c.o  -o cmTC_57062 -rdynamic 
+Building C object CMakeFiles/cmTC_478dc.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_478dc.dir/feature_tests.c.o   -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.c
+Linking C executable cmTC_478dc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_478dc.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_478dc.dir/feature_tests.c.o  -o cmTC_478dc -rdynamic 
 make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
 
 
@@ -187,14 +187,14 @@ make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScre
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f03f5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f03f5.dir/build.make CMakeFiles/cmTC_f03f5.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_7a21c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7a21c.dir/build.make CMakeFiles/cmTC_7a21c.dir/build
 make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_f03f5.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_f03f5.dir/feature_tests.c.o   -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.c
-Linking C executable cmTC_f03f5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f03f5.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_f03f5.dir/feature_tests.c.o  -o cmTC_f03f5 -rdynamic 
+Building C object CMakeFiles/cmTC_7a21c.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_7a21c.dir/feature_tests.c.o   -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.c
+Linking C executable cmTC_7a21c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a21c.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_7a21c.dir/feature_tests.c.o  -o cmTC_7a21c -rdynamic 
 make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
 
 
@@ -205,28 +205,28 @@ make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScre
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d1407/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d1407.dir/build.make CMakeFiles/cmTC_d1407.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_7921e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7921e.dir/build.make CMakeFiles/cmTC_7921e.dir/build
 make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
-Building CXX object CMakeFiles/cmTC_d1407.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_d1407.dir/testCXXCompiler.cxx.o -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_d1407
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1407.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_d1407.dir/testCXXCompiler.cxx.o  -o cmTC_d1407 -rdynamic 
+Building CXX object CMakeFiles/cmTC_7921e.dir/testCXXCompiler.cxx.o
+/usr/bin/c++      -o CMakeFiles/cmTC_7921e.dir/testCXXCompiler.cxx.o -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_7921e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7921e.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_7921e.dir/testCXXCompiler.cxx.o  -o cmTC_7921e -rdynamic 
 make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a8149/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a8149.dir/build.make CMakeFiles/cmTC_a8149.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ba1f6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ba1f6.dir/build.make CMakeFiles/cmTC_ba1f6.dir/build
 make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
-Building CXX object CMakeFiles/cmTC_a8149.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_a8149.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_a8149
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8149.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_a8149.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a8149 -rdynamic  
+Building CXX object CMakeFiles/cmTC_ba1f6.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++      -o CMakeFiles/cmTC_ba1f6.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_ba1f6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba1f6.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTC_ba1f6.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ba1f6 -rdynamic  
 Utilisation des specs internes.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper
@@ -236,9 +236,9 @@ Modèle de thread: posix
 gcc version 6.2.1 20160830 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8149' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccupcygR.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a8149 /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../.. CMakeFiles/cmTC_a8149.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8149' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba1f6' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccog5Pag.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ba1f6 /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../.. CMakeFiles/cmTC_ba1f6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba1f6' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
 
 
@@ -246,14 +246,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a8149/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a8149.dir/build.make CMakeFiles/cmTC_a8149.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ba1f6/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ba1f6.dir/build.make CMakeFiles/cmTC_ba1f6.dir/build]
   ignore line: [make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »]
-  ignore line: [Building CXX object CMakeFiles/cmTC_a8149.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_a8149.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_a8149]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8149.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_a8149.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a8149 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_ba1f6.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_ba1f6.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_ba1f6]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba1f6.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_ba1f6.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ba1f6 -rdynamic  ]
   ignore line: [Utilisation des specs internes.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper]
@@ -263,13 +263,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 6.2.1 20160830 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a8149' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccupcygR.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_a8149 /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../.. CMakeFiles/cmTC_a8149.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ba1f6' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccog5Pag.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_ba1f6 /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtbegin.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1 -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../.. CMakeFiles/cmTC_ba1f6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtend.o /usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crtn.o]
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccupcygR.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccog5Pag.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -284,7 +284,7 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_a8149] ==> ignore
+    arg [cmTC_ba1f6] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../../../lib/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/crtbegin.o] ==> ignore
@@ -293,7 +293,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/6.2.1/../../..]
-    arg [CMakeFiles/cmTC_a8149.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_ba1f6.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -322,14 +322,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8d715/fast"
-/usr/bin/make -f CMakeFiles/cmTC_8d715.dir/build.make CMakeFiles/cmTC_8d715.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5b1bf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5b1bf.dir/build.make CMakeFiles/cmTC_5b1bf.dir/build
 make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
-Building CXX object CMakeFiles/cmTC_8d715.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_8d715.dir/feature_tests.cxx.o -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_8d715
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d715.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_8d715.dir/feature_tests.cxx.o  -o cmTC_8d715 -rdynamic 
+Building CXX object CMakeFiles/cmTC_5b1bf.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_5b1bf.dir/feature_tests.cxx.o -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5b1bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b1bf.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_5b1bf.dir/feature_tests.cxx.o  -o cmTC_5b1bf -rdynamic 
 make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
 
 
@@ -395,14 +395,14 @@ make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScre
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_12be9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_12be9.dir/build.make CMakeFiles/cmTC_12be9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6de0a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6de0a.dir/build.make CMakeFiles/cmTC_6de0a.dir/build
 make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
-Building CXX object CMakeFiles/cmTC_12be9.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_12be9.dir/feature_tests.cxx.o -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_12be9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12be9.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_12be9.dir/feature_tests.cxx.o  -o cmTC_12be9 -rdynamic 
+Building CXX object CMakeFiles/cmTC_6de0a.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_6de0a.dir/feature_tests.cxx.o -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_6de0a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6de0a.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_6de0a.dir/feature_tests.cxx.o  -o cmTC_6de0a -rdynamic 
 make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
 
 
@@ -468,14 +468,14 @@ make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScre
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_bb284/fast"
-/usr/bin/make -f CMakeFiles/cmTC_bb284.dir/build.make CMakeFiles/cmTC_bb284.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_d5452/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d5452.dir/build.make CMakeFiles/cmTC_d5452.dir/build
 make[1] : on entre dans le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
-Building CXX object CMakeFiles/cmTC_bb284.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_bb284.dir/feature_tests.cxx.o -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_bb284
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb284.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_bb284.dir/feature_tests.cxx.o  -o cmTC_bb284 -rdynamic 
+Building CXX object CMakeFiles/cmTC_d5452.dir/feature_tests.cxx.o
+/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_d5452.dir/feature_tests.cxx.o -c /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d5452
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5452.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTC_d5452.dir/feature_tests.cxx.o  -o cmTC_d5452 -rdynamic 
 make[1] : on quitte le répertoire « /home/akitoshi/Documents/Projet/ExiaScreen/Term/TermStatic/CMakeFiles/CMakeTmp »
 
 

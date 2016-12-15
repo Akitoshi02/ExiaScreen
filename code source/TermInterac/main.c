@@ -14,79 +14,93 @@ void *event(char *touche);
 int main(int argc, char *argv[])
 {
     TABVIRTUEL tabvir, grid; //tableau virtuel
-    PBM file; //Fichier .pbm
-    file.data = NULL;
+    PBM *file = NULL; //Fichier .pbm
     int choix = 0;
     int flagquit = 0;
     int tailleL = 0, tailleH = 0;
     pthread_t thlecture, thstop;
     struct winsize sterm;
     COORD place;
+    //Structure qui récupère la list des images
+    DIRIMG *imglist;
+    int tailleimg = 0;
     char touch = 0;
     place.X = 0, place.Y = 0;
 
+    POS position;
      float ratio = 0.0;
      float ratioimg = 0.0;
+    if(argc >= 2)
+    {
+        place.X = atoi(argv[2]);
+        place.Y = atoi(argv[3]);
+    }
       system("setterm -cursor off");
-     if(argc == 3)
-     {
-         file.random = atoi(argv[2]);
-     }
+    //Vas permettre de récuperer les fichiers dans un tableau
+    unsetenv("EXIASAVER3_PMB");
+    setenv("EXIASAVER3_PMB", "/home/akitoshi/Images/imgterm3", 0);
+
+    imglist = listrepertory(getenv("EXIASAVER3_PMB"));
+    file = malloc(imglist->taille * sizeof(PBM));
+    tailleimg = imglist->taille;
+    free(imglist);
+
+    file->random = 0;
     
     //Lecture du fichier .pbm pour charger l'image
     //On lit le fichier dans un thread
-    if (pthread_create(&thlecture, NULL, (void *)lirepbm, &file)) 
+   if (pthread_create(&thlecture, NULL, (void *)lirepbm, file)) 
     {
-	    puts("pthread_create");
-	    
+	    perror("pthread_create");    
     } 
     //thread qui va detecter l'appui d'une touche 
     if (pthread_create(&thstop, NULL, (void *)event, &touch)) 
     {
-	    puts("pthread_create");
+	    perror("pthread_create");
 	    
     } 
 
-do
-{
-    system("clear");
-    //Le main attend la fin de la lecture du fichier !
-    pthread_join(thlecture, NULL);
-    ioctl(0, TIOCGWINSZ, &sterm);
-
-
-
-    //Création du tableau virtuel
-    Createtabvir(&tabvir, 7, 7);
-    Createtabvir(&grid, sterm.ws_row, sterm.ws_col);
-    //Rendu du .pbm dans le tableau virtuel
-    moteurrendu(&tabvir, &file);
-    switch(touch)
+    //Création de la grille qui contiendra l'avions
+  
+    do
     {
-        case 'z':
-            place.Y -= 1;
-            file.random = 0;
-            break;
-        case 'q':
-            place.X -= 1;
-            file.random = 1;
-            break;
-        case 's':
-            place.Y += 1;
-            file.random = 2;
-            break;
-        case 'd':
-            place.X += 1;
-            file.random = 3;
-            break;
-    }
+        //system("clear");
+        //Le main attend la fin de la lecture du fichier !
+        pthread_join(thlecture, NULL);
+        ioctl(0, TIOCGWINSZ, &sterm);
 
-    placement(&grid, &tabvir, place.X, place.Y);
+        //Création du tableau virtuel
+        Createtabvir(&tabvir, 6, 6);
+         Createtabvir(&grid, sterm.ws_row, sterm.ws_col);
+        //Rendu du .pbm dans le tableau virtuel
+        position = DROITE;
+        switch(touch)
+        {
+            case 'z':
+                place.Y -= 4;
+                position = HAUT;
+                break;
+            case 'q':
+                place.X -= 4;
+                position = GAUCHE;
+                break;
+            case 's':
+                place.Y += 4;
+                position = BAS;
+                break;
+            case 'd':
+                place.X += 4;
+                position = DROITE;
+                break;
+        }
+        moteurrendu(&tabvir, file, tailleimg, position);
 
-    //Affichage
-     afftabvir(&grid);
-sleep(0.5);
-}while(touch != 'x');
+        placement(&grid, &tabvir, place.X, place.Y);
+
+        //Affichage
+        afftabvir(&grid);
+        sleep(1);
+    }while(touch != 'x');
 
     system("setterm -cursor on");
     system("reset");

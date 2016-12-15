@@ -31,6 +31,7 @@ typedef struct TABVIRTUEL
     int H;
     int L;
     char **data;
+    int type;
 }TABVIRTUEL;
 
 //Structure d'un fichier pbm
@@ -41,6 +42,7 @@ typedef struct PBM
     int L;
     int random;
     char **data;
+    int type;
 }PBM;
 
 //structure du répertoire d'images
@@ -56,6 +58,11 @@ typedef struct COORD
     int X;
     int Y;
 }COORD;
+//Enumeration pour le placement sur son axe de l'avions
+typedef enum POSITION 
+{
+    HAUT, BAS, GAUCHE, DROITE
+}POS;
 
 
 #endif

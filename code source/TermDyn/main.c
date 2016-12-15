@@ -10,92 +10,108 @@ char getch_(void);
 void *stopevent(int *flagquit);
 
 
-
+//Début main
 int main(int argc, char *argv[])
 {
-    TABVIRTUEL tabvir; //tableau virtuel
-    PBM file; //Fichier .pbm
-    file.data = NULL;
-    int choix = 0;
+    //Structure tableau virtuel
+    TABVIRTUEL tabvir;
+    //Structure fichier
+    //Variable boucle
+    int i = 0;
+    PBM *file = NULL; //Fichier .pbm
+    //Variable pour quitter le programme
     int flagquit = 0;
+    //Variable taille du tableau virtuel
     int tailleL = 0, tailleH = 0;
+    //Variable thread
     pthread_t thlecture, thstop;
+    //Variable HEURE
+    HEURE h;
+    //Structure de la taille du shell
     struct winsize sterm;
+    //Structure qui récupère la list des images
+    DIRIMG *imglist;
+    int tailleimg = 0;
+    //Variable temps d'actualisation
+    int temps = 1;
 
-     float ratio = 0.0;
-     float ratioimg = 0.0;
+    //On récupère les paramètres envoyé au programmes
      if(argc == 3)
      {
-         file.random = atoi(argv[2]);
+         temps = atoi(argv[2]);
+         if(temps == 0)
+         {
+             temps = 1;
+         }
      }
      else
      {
-         file.random = 0;
+         temps = 1;
      }
+
+    //On enlève le curseur
+    system("setterm -cursor off");
+    unsetenv("EXIASAVER2_PMB");
+    setenv("EXIASAVER2_PMB", "/home/akitoshi/Images/imgterm2", 0);
+    //Vas permettre de récuperer les fichiers dans un tableau
+    imglist = listrepertory(getenv("EXIASAVER2_PMB"));
+    file = malloc(imglist->taille * sizeof(PBM));
+    tailleimg = imglist->taille;
+    free(imglist);
+
     
     //Lecture du fichier .pbm pour charger l'image
     //On lit le fichier dans un thread
-    if (pthread_create(&thlecture, NULL, (void *)lirepbm, &file)) 
+   if (pthread_create(&thlecture, NULL, (void *)lirepbm, file)) 
     {
-	    puts("pthread_create");
-	    
+	    perror("pthread_create");    
     } 
     //thread qui va detecter l'appui d'une touche 
     if (pthread_create(&thstop, NULL, (void *)stopevent, &flagquit)) 
     {
-	    puts("pthread_create");
-	    
+	    perror("pthread_create");    
     } 
 
-do
-{
-    //Le main attend la fin de la lecture du fichier !
-    pthread_join(thlecture, NULL);
-    ioctl(0, TIOCGWINSZ, &sterm);
-
-    //Vérification si l'image est carrée ou non
-    ratioimg = (float)file.H / file.L;
-
-    if(ratioimg == 1.0)
+    //début de la boucle du programme pour actualiser l'heures et l'afficher
+    h = getheure();
+    do
     {
-        //On reproportionne l'image en gardant sa forme carré
-        tailleH = 0;
-        tailleL = 0;
-        tailleH = (sterm.ws_row - (file.H));
-        tailleL = (tailleH + file.L);
+        //Le main attend la fin de la lecture du fichier !
+        pthread_join(thlecture, NULL);
+        //récupération de la taille du shell
+        ioctl(0, TIOCGWINSZ, &sterm);
+        tailleH = sterm.ws_row / 3;
+        tailleL = sterm.ws_col;
         
-    }
-    else
-    {
-        //On regarde si le rectangle est levé ou couché et on le proportionne comme on veut
-        if(file.H > file.L)
+        //Création du tableau virtuel
+        Createtabvir(&tabvir, tailleH, tailleL);
+   
+        //Tout les temps on actualise l'horloge
+        if(i == temps)
         {
-            tailleH = sterm.ws_row / 3;
-            tailleL = sterm.ws_col / 2;
+            h = getheure();
+            i = 0;
         }
-        else
-        {
-            tailleH = sterm.ws_row / 2;
-            tailleL = sterm.ws_col / 3;
-        }
+        //Rendu du .pbm dans le tableau virtuel
+        moteurrendu(&tabvir, file, tailleimg, h);
+        //Affichage
+        afftabvir(&tabvir);
+        
+        affrefresh(i, sterm.ws_col); //Affichaque de la phrase
+        i++;
+        sleep(1);
 
-    }
-
-
-    //Création du tableau virtuel
-    Createtabvir(&tabvir, tailleH, tailleL);
-    //Rendu du .pbm dans le tableau virtuel
-    moteurrendu(&tabvir, &file);
-
-    //Affichage
-     afftabvir(&tabvir);
-     sleep(1);
-}while(flagquit == 0);
+    }while(flagquit == 0);
 
     system("clear");
+
     return 0;
 }
+//Fin Main
 
+
+
+//Définition des fonctions pour le main
 void initTerm(void)
 {
     tcgetattr(0, &ancien);

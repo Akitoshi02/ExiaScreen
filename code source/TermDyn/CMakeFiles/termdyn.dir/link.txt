@@ -1,0 +1,1 @@
+/usr/bin/cc     CMakeFiles/termdyn.dir/processus.c.o CMakeFiles/termdyn.dir/main.c.o CMakeFiles/termdyn.dir/virtuel.c.o CMakeFiles/termdyn.dir/pbm.c.o  -o termdyn -rdynamic -lpthread -lm 

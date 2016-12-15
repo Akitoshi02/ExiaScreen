@@ -30,8 +30,6 @@ int main(int argc, char *argv[])
      float ratio = 0.0;
      float ratioimg = 0.0;
 
-     unsetenv("EXIASAVER1_PMB");
-    setenv("EXIASAVER1_PMB", "/home/akitoshi/Images/imgterm1", 0);
     dir = getenv("EXIASAVER1_PMB");
     srand(time(NULL));
     imglist = listrepertory(dir);

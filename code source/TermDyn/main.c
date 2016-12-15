@@ -51,8 +51,6 @@ int main(int argc, char *argv[])
 
     //On enlève le curseur
     system("setterm -cursor off");
-    unsetenv("EXIASAVER2_PMB");
-    setenv("EXIASAVER2_PMB", "/home/akitoshi/Images/imgterm2", 0);
     //Vas permettre de récuperer les fichiers dans un tableau
     imglist = listrepertory(getenv("EXIASAVER2_PMB"));
     file = malloc(imglist->taille * sizeof(PBM));

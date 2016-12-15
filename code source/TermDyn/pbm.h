@@ -5,9 +5,8 @@
 
 
 
-int genrandom(int min, int max);
-void *lirepbm(PBM *f);
 
+void *lirepbm(PBM *file);
 DIRIMG *listrepertory(char *dir);
 
 

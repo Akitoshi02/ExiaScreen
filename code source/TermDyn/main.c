@@ -33,12 +33,16 @@ int main(int argc, char *argv[])
     DIRIMG *imglist;
     int tailleimg = 0;
     //Variable temps d'actualisation
-    int temps = 0;
+    int temps = 1;
 
     //On récupère les paramètres envoyé au programmes
      if(argc == 3)
      {
          temps = atoi(argv[2]);
+         if(temps == 0)
+         {
+             temps = 1;
+         }
      }
      else
      {

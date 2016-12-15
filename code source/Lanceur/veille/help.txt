@@ -1,0 +1,16 @@
+=====================================================================
+
+lanceur : Seule permet de lancer aléatoirement un des fonds d'écran.
+
+lanceur + arg :
+----------------
+-help   : Affiche ceci.
+
+-static : Permet de lancer le fond d'écran statique en arguments vous devez mettre le numéro de l'image.
+
+-dyn    : Permet de lancer le fond d'écran horloge en arguments vous mettez n secondes temps d'actualisation.
+
+-inter  : Permet de lancer le fond d'écran interactif.
+
+-stat   : Permet d'afficher l'histoirque des lancements
+=====================================================================

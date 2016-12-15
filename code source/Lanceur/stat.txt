@@ -1,0 +1,50 @@
+[14/12/2016 - 20:16:54]: interactif - : x : 0 y : 0
+[14/12/2016 - 20:17:44]: interactif - : x : OLDPWD=/home/akitoshi/Documents/Projet/ExiaScreen/Lanceur y : LESS_TERMCAP_mb=[01;31m
+[14/12/2016 - 20:18:08]: interactif - : x : 25 y : 40
+[14/12/2016 - 20:18:18]: static - : fichier6.pbm
+[14/12/2016 - 20:18:20]: static - : fichier6.pbm
+[14/12/2016 - 20:18:22]: interactif - : x : 99 y : 27
+[14/12/2016 - 20:18:28]: static - : fichier3.ppm
+[14/12/2016 - 20:18:30]: static - : fichier6.pbm
+[14/12/2016 - 20:18:32]: static - : fichier4.ppm
+[14/12/2016 - 20:18:33]: interactif - : x : 58 y : 10
+[14/12/2016 - 20:18:38]: dynamique - nb seconde : 1
+[14/12/2016 - 20:19:57]: dynamique - nb seconde : 5
+[14/12/2016 - 20:24:21]: static - : ex1.pbm
+[14/12/2016 - 20:24:24]: static - : fichier4.ppm
+[14/12/2016 - 20:26:33]: static - : fichier1.ppm
+[14/12/2016 - 20:27:41]: static - : fichier4.ppm
+[14/12/2016 - 20:27:43]: static - : fichier4.ppm
+[14/12/2016 - 20:27:44]: static - : fichier4.ppm
+[14/12/2016 - 20:27:45]: static - : fichier4.ppm
+[14/12/2016 - 20:27:51]: static - : fichier4.ppm
+[14/12/2016 - 20:28:02]: static - : fichier4.ppm
+[14/12/2016 - 20:28:40]: dynamique - nb seconde : (null)
+[14/12/2016 - 20:28:45]: dynamique - nb seconde : 0
+[14/12/2016 - 20:30:09]: dynamique - nb seconde : a
+[14/12/2016 - 20:30:21]: dynamique - nb seconde : addddd
+[14/12/2016 - 20:30:23]: dynamique - nb seconde : add
+[14/12/2016 - 20:30:33]: dynamique - nb seconde : 200000000000000000000000
+[14/12/2016 - 20:32:15]: dynamique - nb seconde : 200000000000000000000000
+[14/12/2016 - 20:32:23]: dynamique - nb seconde : 2000
+[14/12/2016 - 20:32:37]: dynamique - nb seconde : aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+[14/12/2016 - 20:32:45]: dynamique - nb seconde : aa6qd5df5sdf
+[14/12/2016 - 20:32:55]: dynamique - nb seconde : aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddddddddddddddddddddddddddddddddddd
+[14/12/2016 - 20:33:17]: dynamique - nb seconde : (null)
+[14/12/2016 - 20:33:46]: dynamique - nb seconde : aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddddddddddddddddddddddddddddddddddd
+[14/12/2016 - 20:34:28]: dynamique - nb seconde : aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddddddddddddddddddddddddddddddddddd
+[14/12/2016 - 20:34:40]: dynamique - nb seconde : 5
+[14/12/2016 - 20:34:54]: interactif - : x : 5 y : (null)
+[14/12/2016 - 20:34:56]: interactif - : x : 5 y : 5
+[14/12/2016 - 20:35:43]: static - : ex1.pbm
+[14/12/2016 - 20:36:07]: static - : fichier3.ppm
+[14/12/2016 - 20:36:17]: interactif - : x : 49 y : 18
+[14/12/2016 - 20:36:27]: static - : aaasssdddeeezzz.pbm
+[14/12/2016 - 20:36:30]: static - : fichier5.ppm
+[14/12/2016 - 20:36:31]: static - : fichier5.ppm
+[14/12/2016 - 20:36:33]: interactif - : x : 83 y : 22
+[14/12/2016 - 20:36:37]: dynamique - nb seconde : 1
+[14/12/2016 - 21:03:20]: static - : aaasssdddeeezzz.pbm
+[14/12/2016 - 21:03:22]: dynamique - nb seconde : 1
+[14/12/2016 - 21:03:23]: dynamique - nb seconde : 1
+[14/12/2016 - 21:03:25]: interactif - : x : 64 y : 19

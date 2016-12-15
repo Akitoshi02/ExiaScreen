@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     POS position;
      float ratio = 0.0;
      float ratioimg = 0.0;
-    if(argc > 2)
+    if(argc >= 2)
     {
         place.X = atoi(argv[2]);
         place.Y = atoi(argv[3]);

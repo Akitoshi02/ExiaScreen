@@ -123,6 +123,33 @@ lanceur/fast:
 	$(MAKE) -f CMakeFiles/lanceur.dir/build.make CMakeFiles/lanceur.dir/build
 .PHONY : lanceur/fast
 
+command.o: command.c.o
+
+.PHONY : command.o
+
+# target to build an object file
+command.c.o:
+	$(MAKE) -f CMakeFiles/lanceur.dir/build.make CMakeFiles/lanceur.dir/command.c.o
+.PHONY : command.c.o
+
+command.i: command.c.i
+
+.PHONY : command.i
+
+# target to preprocess a source file
+command.c.i:
+	$(MAKE) -f CMakeFiles/lanceur.dir/build.make CMakeFiles/lanceur.dir/command.c.i
+.PHONY : command.c.i
+
+command.s: command.c.s
+
+.PHONY : command.s
+
+# target to generate assembly for a file
+command.c.s:
+	$(MAKE) -f CMakeFiles/lanceur.dir/build.make CMakeFiles/lanceur.dir/command.c.s
+.PHONY : command.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -186,6 +213,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lanceur"
+	@echo "... command.o"
+	@echo "... command.i"
+	@echo "... command.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -28,7 +28,7 @@ DIRIMG *listrepertory(char *dir)
 
         while ((fichiernow = readdir(directory)) != NULL) 
         {
-            if (!strcmp(fichiernow->d_name, ".") || !strcmp(fichiernow->d_name, "..") || !strcmp(fichiernow->d_name, "imagesstat") || !strcmp(fichiernow->d_name, "imagesdyn") || !strcmp(fichiernow->d_name, "imagesinter"))
+            if (!strcmp(fichiernow->d_name, ".") || !strcmp(fichiernow->d_name, "..") || !strcmp(fichiernow->d_name, "imagesstat") || !strcmp(fichiernow->d_name, "imagesdyn") || !strcmp(fichiernow->d_name, "imgterm3"))
             {
             } 
             else 
@@ -47,7 +47,7 @@ DIRIMG *listrepertory(char *dir)
     //On remplie notre tableau
      while ((fichiernow = readdir(directory)) != NULL) 
       {
-        if (!strcmp(fichiernow->d_name, ".") || !strcmp(fichiernow->d_name, "..") || !strcmp(fichiernow->d_name, "imagesstat") || !strcmp(fichiernow->d_name, "imagesdyn") || !strcmp(fichiernow->d_name, "imagesinter"))
+        if (!strcmp(fichiernow->d_name, ".") || !strcmp(fichiernow->d_name, "..") || !strcmp(fichiernow->d_name, "imagesstat") || !strcmp(fichiernow->d_name, "imagesdyn") || !strcmp(fichiernow->d_name, "imgterm3"))
         {
         } 
         else 

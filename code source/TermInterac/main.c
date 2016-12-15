@@ -37,8 +37,6 @@ int main(int argc, char *argv[])
     }
       system("setterm -cursor off");
     //Vas permettre de récuperer les fichiers dans un tableau
-    unsetenv("EXIASAVER3_PMB");
-    setenv("EXIASAVER3_PMB", "/home/akitoshi/Images/imgterm3", 0);
 
     imglist = listrepertory(getenv("EXIASAVER3_PMB"));
     file = malloc(imglist->taille * sizeof(PBM));

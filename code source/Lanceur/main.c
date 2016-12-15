@@ -3,18 +3,29 @@
 
 int main(int argc, char *argv[])
 {
+    
     //On définie la variable d'environnement
-    unsetenv("EXIASAVER_HOME");
-    setenv("EXIASAVER_HOME", "/home/akitoshi/Documents/Projet/ExiaScreen/veille", 0);
+    char *usr = getenv("HOME");
+    char home[255];
+    char img1[255];
+    char img2[255];
+    char img3[255];
+    //On copy le /home/$USER dans chaque variable d
+    strcpy(home, usr);
+    strcpy(img1, usr);
+    strcpy(img2, usr);
+    strcpy(img3, usr);
+    //unsetenv("EXIASAVER_HOME");
+    setenv("EXIASAVER_HOME", strcat(home, "/Documents/Projet/ExiaScreen/veille"), 0);
 
-    unsetenv("EXIASAVER1_PMB");
-    setenv("EXIASAVER1_PMB", "/home/akitoshi/Images/imgterm1", 0);
+    //unsetenv("EXIASAVER1_PMB");
+    setenv("EXIASAVER1_PMB", strcat(img1, "/Images/imgterm1"), 0);
 
-    unsetenv("EXIASAVER2_PMB");
-    setenv("EXIASAVER2_PMB", "/home/akitoshi/Images/imgterm2", 0);
+    //unsetenv("EXIASAVER2_PMB");
+    setenv("EXIASAVER2_PMB", strcat(img2, "/Images/imgterm2"), 0);
 
-    unsetenv("EXIASAVER3_PMB");
-    setenv("EXIASAVER3_PMB", "/home/akitoshi/Images/imgterm3", 0);
+    //unsetenv("EXIASAVER3_PMB");
+    setenv("EXIASAVER3_PMB", strcat(img3, "/Images/imgterm3"), 0);
 
     //On initialise srand afin de générer un nombre aléatoire
      srand(time(NULL));
